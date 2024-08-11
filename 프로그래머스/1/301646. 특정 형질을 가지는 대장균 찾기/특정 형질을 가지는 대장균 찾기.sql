@@ -1,9 +1,9 @@
 # ECOLI_DATA 
-# ID : 대장균 개체의 ID
-# PARENT_ID : 부모 개체의 ID(NULL)
-# SIZE_OF_COLONY : 개체의 크기
-# DIFFERENTIATION_DATE : 분화되어 나온 날짜 -> DATE
-# GENOTYPE : 개체의 형질
+# ID : 대장균 개체의 ID(INT)
+# PARENT_ID : 부모 개체의 ID(INT)(NULL)
+# SIZE_OF_COLONY : 개체의 크기(INT)
+# DIFFERENTIATION_DATE : 분화되어 나온 날짜(DATE0
+# GENOTYPE : 개체의 형질(INT)
 
 
 SELECT COUNT(*) AS COUNT
