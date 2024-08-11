@@ -2,21 +2,6 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/301646) 
 
-### 성능 요약
-
-메모리: undefined, 시간: 
-
-### 구분
-
-코딩테스트 연습 > SELECT
-
-### 채점결과
-
-합계: 100.0 / 100.0
-
-### 제출 일자
-
-2024년 08월 11일 21:16:44
 
 ### 문제 설명
 
