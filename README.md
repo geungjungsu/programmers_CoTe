@@ -1,5 +1,4 @@
 ## 코테 준비 시작 👋
-link : https://school.programmers.co.kr/learn/courses/30/lessons/301646
 <!--
 **geungjungsu/geungjungsu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
