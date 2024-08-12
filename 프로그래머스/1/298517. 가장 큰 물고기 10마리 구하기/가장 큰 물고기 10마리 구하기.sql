@@ -1,0 +1,12 @@
+# ID : 고기의 ID (INT)
+# FISH_TYPE : 물고기의 종류(숫자) (INT)
+# LENGTH : 잡은 물고기의 길이(cm) (FLOAT) (NULL)
+-- LENGTH <= 10 : NULL
+
+# TIME : 물고기를 잡은 날짜 (DATE)
+
+SELECT ID, LENGTH
+FROM FISH_INFO
+WHERE (LENGTH IS NOT NULL) OR (LENGTH > 10)
+ORDER BY LENGTH DESC
+LIMIT 10
