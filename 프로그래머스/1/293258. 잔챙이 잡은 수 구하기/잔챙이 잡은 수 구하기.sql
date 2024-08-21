@@ -1,0 +1,5 @@
+# 잡은 물고기 < 10 : null 의 개수 구하기 -> FISH_COUNT
+
+SELECT SUM(LENGTH IS NULL) AS FISH_COUNT
+FROM FISH_INFO
+;
