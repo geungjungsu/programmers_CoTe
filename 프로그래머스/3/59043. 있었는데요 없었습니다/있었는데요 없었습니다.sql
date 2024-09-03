@@ -1,0 +1,16 @@
+# 보호 시작일 < 입양일 
+# 동물의 아이디, 이름
+# ORDER BY 보호시작일 ASC ;
+
+SELECT
+    I.ANIMAL_ID, I.NAME
+FROM 
+    ANIMAL_INS AS I
+JOIN 
+    ANIMAL_OUTS AS O
+    ON I.ANIMAL_ID = O.ANIMAL_ID
+WHERE
+    I.DATETIME > O.DATETIME
+ORDER BY
+    I.DATETIME ASC
+;
