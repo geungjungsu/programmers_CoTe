@@ -1,0 +1,28 @@
+# PATIENT, DOCTOR 그리고 APPOINTMENT 테이블에서
+# '2022-04-13' 에 취소되지 않은 흉부외과(CS) 진료예약내역 조회
+# -> APPOINTMENT의 예약취소날짜(APNT_CNCL_YMD)
+
+
+# APNT_NO, PT_NAME, PT_NO, MCDP_CD, DR_NAME , APNT_YMD
+
+-- 2022-04-13에 취소되지 않음 AND 흉부회과 CS 
+SELECT
+    A.APNT_NO, P.PT_NAME, A.PT_NO, A.MCDP_CD, D.DR_NAME , 
+    A.APNT_YMD
+FROM 
+    APPOINTMENT AS A
+JOIN
+    PATIENT AS P
+    ON A.PT_NO = P.PT_NO
+JOIN
+    DOCTOR AS D
+    ON A.MDDR_ID = D.DR_ID
+WHERE
+    DATE_FORMAT(APNT_YMD,'%Y-%m-%d') = '2022-04-13'
+    AND
+    APNT_CNCL_YN = 'N'
+    AND
+    A.MCDP_CD = 'CS'
+ORDER BY
+    APNT_YMD ASC
+    ;
