@@ -1,0 +1,9 @@
+# USER_INFO
+# GENDER -> 0 : 남자 / 1 : 여자
+
+SELECT
+    COUNT(*) AS USERS
+FROM
+    USER_INFO
+WHERE
+    AGE IS NULL
