@@ -1,0 +1,10 @@
+# 젊은 동물 -> INTAKE_CONDITION != Aged
+# 아이디, 이름
+# ORDER BY ID ;
+
+SELECT
+    ANIMAL_ID, NAME
+FROM
+    ANIMAL_INS
+WHERE
+    INTAKE_CONDITION != 'Aged' ;
