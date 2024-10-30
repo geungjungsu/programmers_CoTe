@@ -1,0 +1,36 @@
+# REST_INFO : 식당의 정보 
+
+# REST_REVIEW : 식당 리뷰 정보
+
+# 공통 : REST_ID
+
+# 서울에 위치한 식당들
+# 식당 ID, 식당이름, 음식종류, 즐겨찾기수, 주소, 리뷰 평균 점수 
+# 리뷰 평균 점수  소수점 두자리까지(세자리에서 반올림)
+# ORDER BY 평균점수 DESC, 즐겨찾기수 DESC
+
+WITH TEMP_REVIEW AS(
+SELECT 
+    *
+FROM
+    REST_REVIEW
+WHERE
+    REVIEW_SCORE IS NOT NULL  
+)
+
+
+SELECT
+    I.REST_ID, I.REST_NAME, I.FOOD_TYPE, I.FAVORITES, I.ADDRESS, ROUND(AVG(REVIEW_SCORE),2) AS SCORE
+FROM
+    REST_INFO AS I
+JOIN
+    TEMP_REVIEW AS R
+    ON I.REST_ID = R.REST_ID
+WHERE
+    REPLACE(I.ADDRESS, ' ', '') LIKE '서울%'
+GROUP BY
+    I.REST_ID, I.REST_NAME, I.FOOD_TYPE, I.FAVORITES, I.ADDRESS
+ORDER BY
+    SCORE DESC, FAVORITES DESC ;
+
+    
