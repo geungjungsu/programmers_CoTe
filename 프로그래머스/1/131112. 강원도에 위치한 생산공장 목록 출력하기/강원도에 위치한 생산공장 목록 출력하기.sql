@@ -1,0 +1,14 @@
+# FOOD_FACTORY : 식품공장 정보
+
+# 강원도 위치
+# 식품공장 ID, 공장이름, 주소
+# ORDER BY 공장 ID ASC ;
+
+SELECT
+    FACTORY_ID, FACTORY_NAME, ADDRESS
+FROM
+    FOOD_FACTORY
+WHERE
+    ADDRESS LIKE '강원%'
+ORDER BY
+    FACTORY_ID ASC ;
