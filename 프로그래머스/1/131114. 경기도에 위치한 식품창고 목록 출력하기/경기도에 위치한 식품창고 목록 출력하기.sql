@@ -1,0 +1,15 @@
+# FOOD_WAREHOUSE : 식품 창고 정보
+
+# 경기도 위치
+# 창고 ID, 이름, 주소, 냉동시설 여부
+# 냉동시설 여부 NULL -> 'N'으로 출력
+# ORDER BY 창고 ID ASC ;
+
+SELECT 
+    WAREHOUSE_ID, WAREHOUSE_NAME, ADDRESS, COALESCE(FREEZER_YN, NULL,'N') AS FREEZER_YN
+FROM 
+    FOOD_WAREHOUSE
+WHERE
+    ADDRESS LIKE '경기%'
+ORDER BY 
+    WAREHOUSE_ID ASC ;
