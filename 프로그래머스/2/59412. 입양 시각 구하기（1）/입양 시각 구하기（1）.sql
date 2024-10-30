@@ -1,0 +1,15 @@
+# ANIMAL_OUTS : 입양 보낸 동물의 정보
+
+# 09:00 ~ 19:59
+# 각 시간대별로 입양이 몇건이나 발생했는지
+
+SELECT
+    DATE_FORMAT(DATETIME,'%H') AS HOUR, COUNT(*) AS `COUNT`
+FROM 
+    ANIMAL_OUTS
+WHERE
+    DATE_FORMAT(DATETIME,'%H') < 20 AND DATE_FORMAT(DATETIME,'%H') >= 9
+GROUP BY
+    HOUR
+ORDER BY 
+    HOUR ;
