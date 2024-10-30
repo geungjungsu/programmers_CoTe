@@ -1,0 +1,17 @@
+# FOOD_PRODUCT : 식품의 정보
+
+# 가격이 제일 비싼 식품
+# 식품 ID, 식품 이름, 식품 코드, 식품 분류, 식품 가격
+
+SELECT
+    PRODUCT_ID, PRODUCT_NAME, PRODUCT_CD, CATEGORY, PRICE
+FROM
+    FOOD_PRODUCT AS F
+WHERE
+    F.PRICE =
+(SELECT
+    MAX(PRICE) AS PRICE
+FROM
+    FOOD_PRODUCT)
+;
+    
