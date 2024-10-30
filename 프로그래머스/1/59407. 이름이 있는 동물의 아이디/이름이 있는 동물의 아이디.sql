@@ -1,0 +1,13 @@
+# ANIMAL_INS : 동물의 정보
+
+# 이름이 있는 동물 ID 조회
+# ORDER BY ANIMAL_ID ASC ;
+
+SELECT
+    ANIMAL_ID
+FROM
+    ANIMAL_INS
+WHERE
+    NAME IS NOT NULL
+ORDER BY
+    ANIMAL_ID ASC ;
